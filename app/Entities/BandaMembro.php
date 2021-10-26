@@ -3,17 +3,18 @@
 namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Membro extends Model
+class BandaMembro extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'Membros';
+    protected $table = 'banda_membro';
 
     protected $fillable = [
-        'nome',
-        'atividade'
+        'banda_id',
+        'membro_id'
     ];
+
+
 }

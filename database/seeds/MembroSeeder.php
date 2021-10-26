@@ -13,11 +13,14 @@ class MembroSeeder extends Seeder
      */
     public function run()
     {
-        $banda = Banda::where('nome', 'Kreator')->first();
         Membro::create([
             'nome' =>  'Ventor',
-            'atividade' => 'Baterista',
-            'banda_id' => $banda->id,
+            'atividade' => 'Baterista'
+        ]);
+
+        Membro::create([
+            'nome' =>  'Mille Petrozza',
+            'atividade' => 'Vocalista, Guitarrista'
         ]);
     }
 }

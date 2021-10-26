@@ -8,7 +8,7 @@
             <p><a href="{{ route('banda.index') }}" type="button" class="btn btn-info">Listar</a></p>
         </div>
     </div>
-    <form method="POST" action="{{ route('banda.cadastra') }}">
+    <form method="POST" action="{{ route('banda.cadastra') }}" enctype="multipart/form-data">
         @csrf
         @include('banda._form')
 

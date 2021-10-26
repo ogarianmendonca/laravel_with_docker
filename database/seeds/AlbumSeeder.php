@@ -17,7 +17,14 @@ class AlbumSeeder extends Seeder
         Album::create([
             'nome' => 'Enemy of God',
             'data_lancamento' => '2005-10-14 00:00:01',
-            'qtd_musicas' => 5,
+            'qtd_musicas' => 12,
+            'banda_id' => $banda->id
+        ]);
+
+        Album::create([
+            'nome' => 'Pleasure to Kill',
+            'data_lancamento' => '2006-10-14 00:00:01',
+            'qtd_musicas' => 10,
             'banda_id' => $banda->id
         ]);
     }

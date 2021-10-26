@@ -3,6 +3,7 @@
 namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -19,6 +20,7 @@ class Banda extends Model
         'nome',
         'genero',
         'data_criacao',
+        'imagem'
     ];
 
     /**
@@ -31,11 +33,11 @@ class Banda extends Model
     }
 
     /**
-     * Um para muitos
-     * @return HasMany
+     * Muitos para muitos
+     * @return BelongsToMany
      */
     public function membros()
     {
-        return $this->hasMany('App\Entities\Membro');
+        return $this->belongsToMany('App\Entities\Membro');
     }
 }

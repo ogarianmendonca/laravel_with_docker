@@ -17,7 +17,6 @@ class CreateMembrosTable extends Migration
             $table->id();
             $table->string('nome');
             $table->string('atividade');
-            $table->integer('banda_id');
             $table->timestamps();
             $table->softDeletes('deleted_at');
         });
